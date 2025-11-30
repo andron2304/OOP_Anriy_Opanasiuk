@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab4v12\\lab4v12.csproj",
-      "projectName": "lab4v12",
-      "projectPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab4v12\\lab4v12.csproj",
+      "projectUniqueName": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\labv6v4\\obj\\OOP_Anriy_Opanasiuk.csproj",
+      "projectName": "OOP_Anriy_Opanasiuk",
+      "projectPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\labv6v4\\obj\\OOP_Anriy_Opanasiuk.csproj",
       "packagesPath": "C:\\Users\\andri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab4v12\\obj\\",
+      "outputPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\labv6v4\\obj\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andri\\AppData\\Roaming\\NuGet\\NuGet.Config",
