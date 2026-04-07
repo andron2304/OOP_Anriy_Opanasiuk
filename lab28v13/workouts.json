@@ -1,0 +1,40 @@
+[
+  {
+    "Id": 1,
+    "Title": "Тренування грудей та трицепсу",
+    "Date": "2026-04-07",
+    "Exercises": [
+      {
+        "Id": 1,
+        "Name": "Жим лежачи",
+        "Repetitions": 10,
+        "WeightKg": 80
+      },
+      {
+        "Id": 2,
+        "Name": "Віджимання на брусах",
+        "Repetitions": 15,
+        "WeightKg": 0
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Title": "Тренування спини",
+    "Date": "2026-04-05",
+    "Exercises": [
+      {
+        "Id": 3,
+        "Name": "Підтягування",
+        "Repetitions": 12,
+        "WeightKg": 0
+      },
+      {
+        "Id": 4,
+        "Name": "Тяга штанги в нахилі",
+        "Repetitions": 10,
+        "WeightKg": 60
+      }
+    ]
+  }
+]
