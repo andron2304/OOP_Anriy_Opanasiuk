@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-// --- 1. Класи предметної області ---
+// 1. Класи предметної області
 
 public class Exercise
 {
@@ -23,7 +23,7 @@ public class Workout
     public List<Exercise> Exercises { get; set; } = new List<Exercise>();
 }
 
-// --- 2. Репозиторій ---
+// 2. Репозиторій
 
 public class WorkoutRepository
 {
@@ -80,7 +80,7 @@ public class WorkoutRepository
     }
 }
 
-// --- 3. Демонстрація роботи (Main) ---
+// 3. Демонстрація роботи (Main)
 
 class Program
 {
