@@ -1,0 +1,15 @@
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\bin\Debug\net10.0\lab22_hw.exe
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\bin\Debug\net10.0\lab22_hw.deps.json
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\bin\Debug\net10.0\lab22_hw.runtimeconfig.json
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\bin\Debug\net10.0\lab22_hw.dll
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\bin\Debug\net10.0\lab22_hw.pdb
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\lab22_hw.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\lab22_hw.AssemblyInfoInputs.cache
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\lab22_hw.AssemblyInfo.cs
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\lab22_hw.csproj.CoreCompileInputs.cache
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\lab22_hw.sourcelink.json
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\lab22_hw.dll
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\refint\lab22_hw.dll
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\lab22_hw.pdb
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\lab22_hw.genruntimeconfig.cache
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\lab22_hw\obj\Debug\net10.0\ref\lab22_hw.dll
