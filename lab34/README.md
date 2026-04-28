@@ -1,18 +1,18 @@
-# Student Course Registration System
+# Система реєстрації студентів на курси
 
-A console-based application for managing student course registrations, built as a layered architecture demonstration.
+Консольний додаток для управління реєстрацією студентів на курси, побудований за шаровою архітектурою.
 
-## Project Structure
+## Структура проєкту
 
 ```
 src/
-├── StudentRegistrationSystem.Domain/     # Core business entities and interfaces
-├── StudentRegistrationSystem.Application/ # Business logic and services
-├── StudentRegistrationSystem.Infrastructure/ # Data access implementations
-└── StudentRegistrationSystem.Console/    # User interface
+├── StudentRegistrationSystem.Domain/     # Основні сутності та інтерфейси
+├── StudentRegistrationSystem.Application/ # Бізнес-логіка та сервіси
+├── StudentRegistrationSystem.Infrastructure/ # Імплементації доступу до даних
+└── StudentRegistrationSystem.Console/    # Інтерфейс користувача
 
 tests/
-└── StudentRegistrationSystem.Tests/      # Unit tests
+└── StudentRegistrationSystem.Tests/      # Модульні тести
 
 docs/
 ├── vision.md
@@ -22,34 +22,34 @@ docs/
 └── iteration-1.md
 ```
 
-## How to Run
+## Як запустити
 
-1. Navigate to the solution directory
-2. Restore dependencies: `dotnet restore`
-3. Build the solution: `dotnet build`
-4. Run the console application: `dotnet run --project src/StudentRegistrationSystem.Console`
+1. Перейдіть у директорію `lab34`
+2. Відновіть залежності: `dotnet restore`
+3. Зберіть рішення: `dotnet build`
+4. Запустіть консольний додаток: `dotnet run --project src/StudentRegistrationSystem.Console`
 
-## Available Commands
+## Доступні команди
 
-1. Register student for course
-2. View student's courses
-3. View available courses
-4. Exit
+1. Зареєструвати студента на курс
+2. Переглянути курси студента
+3. Переглянути доступні курси
+4. Вийти
 
-## Running Tests
+## Запуск тестів
 
 `dotnet test`
 
-## Architecture
+## Архітектура
 
-- **Domain**: Contains entities (Student, Course) and repository interfaces
-- **Application**: Business services and logic
-- **Infrastructure**: Repository implementations (currently in-memory)
-- **Console**: User interface layer
+- **Domain**: Сутності (Student, Course) та інтерфейси репозиторіїв
+- **Application**: Бізнес-сервіси і логіка
+- **Infrastructure**: Імплементації репозиторіїв (поки що in-memory)
+- **Console**: Інтерфейс користувача
 
-## Current Features
+## Поточні функції
 
-- Student and course management
-- Course registration with capacity checks
-- Basic validation and error handling
-- Unit tests for core functionality
+- Управління студентами та курсами
+- Реєстрація на курс з перевіркою доступності
+- Базова валідація та обробка помилок
+- Модульні тести для основної функціональності
