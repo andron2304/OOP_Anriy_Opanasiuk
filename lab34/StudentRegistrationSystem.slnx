@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/StudentRegistrationSystem.Application/StudentRegistrationSystem.Application.csproj" />
+    <Project Path="src/StudentRegistrationSystem.Console/StudentRegistrationSystem.Console.csproj" />
+    <Project Path="src/StudentRegistrationSystem.Domain/StudentRegistrationSystem.Domain.csproj" />
+    <Project Path="src/StudentRegistrationSystem.Infrastructure/StudentRegistrationSystem.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/StudentRegistrationSystem.Tests/StudentRegistrationSystem.Tests.csproj" />
+  </Folder>
+</Solution>
