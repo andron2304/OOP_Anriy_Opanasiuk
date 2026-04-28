@@ -1,20 +1,19 @@
 # IndependentWork20
 
-Консольний проєкт для лабораторної роботи №20. Реалізовано систему обробки даних з використанням патернів Strategy та Observer.
+Консольний проєкт для лабораторної роботи №20, Варіант 13. Реалізовано систему обробки даних про книги з використанням патернів Strategy та Observer.
 
 ## Що реалізовано
 
-- Інтерфейс `IDataProcessorStrategy` з методом `string Process(string data)`
+- Інтерфейс `IDataProcessorStrategy` з методом `void Process(string data)`
 - Стратегії:
-  - `EncryptDataStrategy` — імітує шифрування даних
-  - `CompressDataStrategy` — імітує стиск даних
-  - `LogDataStrategy` — імітує логування даних
+  - `AddBookStrategy` — імітує додавання книги
+  - `RemoveBookStrategy` — імітує видалення книги
+  - `UpdateBookInfoStrategy` — імітує оновлення інформації про книгу
 - Клас `DataContext` з можливістю зміни стратегії під час виконання
 - Клас `DataPublisher` з подією `DataProcessed`
 - Спостерігачі:
-  - `ConsoleLoggerObserver`
-  - `FileSaverObserver`
-  - `AnalyticsSenderObserver`
+  - `LibraryCatalogObserver`
+  - `NewArrivalsNotifierObserver`
 - В `Main` показано зміну стратегій і сповіщення спостерігачів
 
 ## Як запустити
