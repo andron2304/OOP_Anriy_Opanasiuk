@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\tests\\tests.csproj": {}
+    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\tests\\tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\IndependentWork24.csproj": {
+    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\IndependentWork24.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\IndependentWork24.csproj",
+        "projectUniqueName": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\IndependentWork24.csproj",
         "projectName": "IndependentWork24",
-        "projectPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\IndependentWork24.csproj",
+        "projectPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\IndependentWork24.csproj",
         "packagesPath": "C:\\Users\\andri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\obj\\",
+        "outputPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andri\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -337,14 +337,14 @@
         }
       }
     },
-    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\tests\\tests.csproj": {
+    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\tests\\tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\tests\\tests.csproj",
+        "projectUniqueName": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\tests\\tests.csproj",
         "projectName": "tests",
-        "projectPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\tests\\tests.csproj",
+        "projectPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\tests\\tests.csproj",
         "packagesPath": "C:\\Users\\andri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\tests\\obj\\",
+        "outputPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andri\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -359,8 +359,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\IndependentWork24.csproj": {
-                "projectPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\IndependentWork24.csproj"
+              "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\IndependentWork24.csproj": {
+                "projectPath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\IndependentWork24.csproj"
               }
             }
           }

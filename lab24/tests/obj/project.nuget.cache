@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YkkmAYOa9As=",
+  "dgSpecHash": "EoCWB1RqXt0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\IndependentWork24\\tests\\tests.csproj",
+  "projectFilePath": "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab24\\tests\\tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andri\\.nuget\\packages\\microsoft.codecoverage\\17.14.1\\microsoft.codecoverage.17.14.1.nupkg.sha512",
     "C:\\Users\\andri\\.nuget\\packages\\microsoft.net.test.sdk\\17.14.1\\microsoft.net.test.sdk.17.14.1.nupkg.sha512",
