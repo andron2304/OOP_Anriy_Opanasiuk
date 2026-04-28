@@ -1,0 +1,6 @@
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\tests\obj\Debug\net10.0\tests.csproj.AssemblyReference.cache
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\tests\obj\Debug\net10.0\tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\tests\obj\Debug\net10.0\tests.AssemblyInfoInputs.cache
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\tests\obj\Debug\net10.0\tests.AssemblyInfo.cs
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\tests\obj\Debug\net10.0\tests.csproj.CoreCompileInputs.cache
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\tests\obj\Debug\net10.0\tests.sourcelink.json

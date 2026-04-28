@@ -1,0 +1,5 @@
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\obj\Debug\net10.0\IndependentWork21.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\obj\Debug\net10.0\IndependentWork21.AssemblyInfoInputs.cache
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\obj\Debug\net10.0\IndependentWork21.AssemblyInfo.cs
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\obj\Debug\net10.0\IndependentWork21.csproj.CoreCompileInputs.cache
+C:\Users\andri\Documents\GitHub\OOP_Anriy_Opanasiuk\IndependentWork21\obj\Debug\net10.0\IndependentWork21.sourcelink.json

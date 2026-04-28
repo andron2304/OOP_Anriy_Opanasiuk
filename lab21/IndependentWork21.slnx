@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="IndependentWork21.csproj" />
+  <Project Path="tests/tests.csproj" />
+</Solution>
