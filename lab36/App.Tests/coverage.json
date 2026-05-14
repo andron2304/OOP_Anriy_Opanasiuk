@@ -1,0 +1,282 @@
+{
+  "App.dll": {
+    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab36\\App\\Program.cs": {
+      "Program": {
+        "System.Void Program::<Main>$(System.String[])": {
+          "Lines": {
+            "2": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab36\\App\\OrderService.cs": {
+      "App.Services.OrderService": {
+        "App.Domain.Order App.Services.OrderService::CreateOrder(System.Decimal)": {
+          "Lines": {
+            "29": 4,
+            "30": 4,
+            "31": 4,
+            "32": 4,
+            "33": 4
+          },
+          "Branches": []
+        },
+        "System.Void App.Services.OrderService::PayOrder(System.Guid)": {
+          "Lines": {
+            "36": 2,
+            "37": 3,
+            "38": 3,
+            "39": 1,
+            "40": 1
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 44,
+              "EndOffset": 57,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<App.Domain.Order> App.Services.OrderService::GetAllOrders()": {
+          "Lines": {
+            "42": 7
+          },
+          "Branches": []
+        },
+        "System.Void App.Services.OrderService::.ctor(App.Interfaces.IOrderRepository)": {
+          "Lines": {
+            "9": 11,
+            "11": 11,
+            "12": 11,
+            "13": 11,
+            "14": 11
+          },
+          "Branches": []
+        }
+      },
+      "App.Services.OrderService/<LoadStateAsync>d__3": {
+        "System.Void App.Services.OrderService/<LoadStateAsync>d__3::MoveNext()": {
+          "Lines": {
+            "17": 6,
+            "18": 6,
+            "19": 6,
+            "20": 6,
+            "21": 6
+          },
+          "Branches": []
+        }
+      },
+      "App.Services.OrderService/<SaveStateAsync>d__4": {
+        "System.Void App.Services.OrderService/<SaveStateAsync>d__4::MoveNext()": {
+          "Lines": {
+            "24": 4,
+            "25": 4,
+            "26": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab36\\App\\Infrastructure.cs": {
+      "App.Infrastructure.JsonOrderRepository": {
+        "System.Void App.Infrastructure.JsonOrderRepository::.ctor(System.String)": {
+          "Lines": {
+            "11": 8,
+            "12": 8,
+            "13": 8,
+            "14": 8
+          },
+          "Branches": []
+        }
+      },
+      "App.Infrastructure.JsonOrderRepository/<LoadAsync>d__3": {
+        "System.Void App.Infrastructure.JsonOrderRepository/<LoadAsync>d__3::MoveNext()": {
+          "Lines": {
+            "30": 5,
+            "31": 5,
+            "34": 5,
+            "35": 5,
+            "36": 6,
+            "38": 4,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "44": 4
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 36,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 9
+            },
+            {
+              "Line": 36,
+              "Offset": 214,
+              "EndOffset": 216,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 36,
+              "Offset": 214,
+              "EndOffset": 224,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 38,
+              "Offset": 237,
+              "EndOffset": 239,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 237,
+              "EndOffset": 245,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 3
+            }
+          ]
+        }
+      },
+      "App.Infrastructure.JsonOrderRepository/<SaveAsync>d__2": {
+        "System.Void App.Infrastructure.JsonOrderRepository/<SaveAsync>d__2::MoveNext()": {
+          "Lines": {
+            "17": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 3,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "27": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\andri\\Documents\\GitHub\\OOP_Anriy_Opanasiuk\\lab36\\App\\Domain.cs": {
+      "App.Domain.DomainException": {
+        "System.Void App.Domain.DomainException::.ctor(System.String)": {
+          "Lines": {
+            "6": 15
+          },
+          "Branches": []
+        }
+      },
+      "App.Domain.Order": {
+        "System.Guid App.Domain.Order::get_Id()": {
+          "Lines": {
+            "11": 35
+          },
+          "Branches": []
+        },
+        "System.Decimal App.Domain.Order::get_TotalAmount()": {
+          "Lines": {
+            "12": 37
+          },
+          "Branches": []
+        },
+        "System.String App.Domain.Order::get_Status()": {
+          "Lines": {
+            "13": 78
+          },
+          "Branches": []
+        },
+        "System.Void App.Domain.Order::Pay()": {
+          "Lines": {
+            "30": 4,
+            "31": 5,
+            "32": 3,
+            "33": 3
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 31,
+              "Offset": 19,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void App.Domain.Order::.ctor()": {
+          "Lines": {
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "19": 3
+          },
+          "Branches": []
+        },
+        "System.Void App.Domain.Order::.ctor(System.Guid,System.Decimal)": {
+          "Lines": {
+            "21": 27,
+            "22": 27,
+            "23": 28,
+            "24": 26,
+            "25": 26,
+            "26": 26,
+            "27": 26
+          },
+          "Branches": [
+            {
+              "Line": 23,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 23,
+              "Offset": 32,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 26
+            }
+          ]
+        }
+      }
+    }
+  }
+}
