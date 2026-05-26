@@ -13,7 +13,7 @@ namespace IndependentWork23
         public void SendToPrinter(byte[] rawData)
         {
             string text = System.Text.Encoding.UTF8.GetString(rawData);
-            Console.WriteLine($"LegacyPrinterDriver: друк документа -> {text}");
+            Console.WriteLine($"Драйвер старого принтера: друк документа -> {text}");
         }
     }
 
@@ -29,7 +29,7 @@ namespace IndependentWork23
         public void Print(string document)
         {
             byte[] rawData = System.Text.Encoding.UTF8.GetBytes(document);
-            Console.WriteLine("PrinterDriverAdapter: адаптація документа для старого драйвера...");
+            Console.WriteLine("Адаптер драйвера принтера: адаптація документа для старого драйвера...");
             _legacyPrinter.SendToPrinter(rawData);
         }
     }
@@ -47,7 +47,7 @@ namespace IndependentWork23
     {
         public void AddJob(string formattedDocument)
         {
-            Console.WriteLine($"PrintQueue: додано до черги друку:\n{formattedDocument}");
+            Console.WriteLine($"Черга друку: додано до черги друку:\n{formattedDocument}");
         }
     }
 
@@ -68,7 +68,7 @@ namespace IndependentWork23
         {
             string formatted = _formatter.FormatDocument(title, body);
             _queue.AddJob(formatted);
-            Console.WriteLine("PrinterFacade: передача документа на друк...");
+            Console.WriteLine("Фасад принтера: передача документа на друк...");
             _printer.Print(formatted);
         }
     }
@@ -100,13 +100,13 @@ namespace IndependentWork23
 
         public void Print(string document)
         {
-            if (_userRole != "admin")
+            if (_userRole != "адмін")
             {
-                Console.WriteLine("SecurityPrinterProxy: доступ заборонено. Потрібна роль admin.");
+                Console.WriteLine("Проксі безпеки принтера: доступ заборонено. Потрібна роль 'адмін'.");
                 return;
             }
 
-            Console.WriteLine("SecurityPrinterProxy: доступ дозволено, друк через реальний принтер...");
+            Console.WriteLine("Проксі безпеки принтера: доступ дозволено, друк через реальний принтер...");
             _realPrinter.Print(document);
         }
     }
@@ -125,11 +125,11 @@ namespace IndependentWork23
         {
             if (_cachedDocument == document)
             {
-                Console.WriteLine("CachingDataLoaderProxy: використовується кешований документ, друк повторно не виконано.");
+                Console.WriteLine("Проксі кешування: використовується кешований документ, друк повторно не виконано.");
                 return;
             }
 
-            Console.WriteLine("CachingDataLoaderProxy: кешування документа перед друком...");
+            Console.WriteLine("Проксі кешування: кешування документа перед друком...");
             _cachedDocument = document;
             _realPrinter.Print(document);
         }
@@ -139,25 +139,25 @@ namespace IndependentWork23
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("=== Adapter ===");
+            Console.WriteLine("=== Адаптер ===");
             var legacyPrinter = new LegacyPrinterDriver();
             IPrintJob adapter = new PrinterDriverAdapter(legacyPrinter);
             adapter.Print("Документ для друку: Варіант 13");
 
-            Console.WriteLine("\n=== Facade ===");
+            Console.WriteLine("\n=== Фасад ===");
             var formatter = new DocumentFormatter();
             var queue = new PrintQueue();
             var facadePrinter = new PrinterDriverAdapter(legacyPrinter);
             var printerFacade = new PrinterFacade(formatter, queue, facadePrinter);
             printerFacade.PrintDocument("Звіт", "Це тестовий документ для друку через фасад.");
 
-            Console.WriteLine("\n=== Proxy ===");
+            Console.WriteLine("\n=== Проксі ===");
             IPrinter realPrinter = new RealPrinter();
-            IPrinter securityProxy = new SecurityPrinterProxy(realPrinter, "user");
+            IPrinter securityProxy = new SecurityPrinterProxy(realPrinter, "користувач");
             securityProxy.Print("Секретний документ що не можна друкувати");
 
             Console.WriteLine();
-            IPrinter adminProxy = new SecurityPrinterProxy(realPrinter, "admin");
+            IPrinter adminProxy = new SecurityPrinterProxy(realPrinter, "адмін");
             IPrinter cachingProxy = new CachingDataLoaderProxy(adminProxy);
             cachingProxy.Print("Документ для друку з кешуванням");
             cachingProxy.Print("Документ для друку з кешуванням");

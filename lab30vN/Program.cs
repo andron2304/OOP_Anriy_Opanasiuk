@@ -15,7 +15,7 @@ namespace lab30vN
         public decimal GetRate(string currency)
         {
             if (!rates.ContainsKey(currency))
-                throw new ArgumentException("Currency not supported");
+                throw new ArgumentException("Валюта не підтримується");
 
             return rates[currency];
         }
@@ -23,7 +23,7 @@ namespace lab30vN
         public decimal Convert(string from, string to, decimal amount)
         {
             if (amount < 0)
-                throw new ArgumentException("Amount must be positive");
+                throw new ArgumentException("Сума повинна бути додатною");
 
             decimal fromRate = GetRate(from);
             decimal toRate = GetRate(to);
@@ -37,7 +37,7 @@ namespace lab30vN
     {
         static void Main()
         {
-            Console.WriteLine("Currency Converter");
+            Console.WriteLine("Конвертер валют");
         }
     }
 }

@@ -53,13 +53,13 @@ public class NightShippingStrategy : IShippingStrategy
 
 public static class ShippingStrategyFactory
 {
-    private static readonly Dictionary<string, IShippingStrategy> _strategies =
+        private static readonly Dictionary<string, IShippingStrategy> _strategies =
         new Dictionary<string, IShippingStrategy>(StringComparer.OrdinalIgnoreCase)
         {
-            { "Standard", new StandardShippingStrategy() },
-            { "Express", new ExpressShippingStrategy() },
-            { "International", new InternationalShippingStrategy() },
-            { "Night", new NightShippingStrategy() }
+            { "Стандартна", new StandardShippingStrategy() },
+            { "Експрес", new ExpressShippingStrategy() },
+            { "Міжнародна", new InternationalShippingStrategy() },
+            { "Нічна", new NightShippingStrategy() }
         };
 
     public static IShippingStrategy CreateStrategy(string deliveryType)
@@ -95,7 +95,7 @@ class Program
     static void Main()
     {
         Console.WriteLine("Оберіть тип доставки:");
-        Console.WriteLine("Standard, Express, International, Night");
+        Console.WriteLine("Стандартна, Експрес, Міжнародна, Нічна");
         string type = Console.ReadLine();
 
         Console.Write("Введіть відстань (км): ");

@@ -13,12 +13,12 @@ namespace IndependentWork16
             Console.WriteLine("Вибір каналу");
             if (channel == "email")
             {
-                Console.WriteLine("Відправка Email");
+                Console.WriteLine("Відправка електронного листа");
                 Console.WriteLine(formattedMessage);
             }
             else if (channel == "sms")
             {
-                Console.WriteLine("Відправка SMS");
+                Console.WriteLine("Відправка SMS-повідомлення");
                 Console.WriteLine(formattedMessage);
             }
 
@@ -68,7 +68,7 @@ namespace IndependentWork16
     {
         public void Send(string message)
         {
-            Console.WriteLine("Email відправлено:");
+            Console.WriteLine("Електронний лист відправлено:");
             Console.WriteLine(message);
         }
     }
@@ -77,7 +77,7 @@ namespace IndependentWork16
     {
         public void Send(string message)
         {
-            Console.WriteLine("SMS відправлено:");
+            Console.WriteLine("SMS-повідомлення відправлено:");
             Console.WriteLine(message);
         }
     }

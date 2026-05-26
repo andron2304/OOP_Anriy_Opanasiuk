@@ -38,7 +38,7 @@ namespace IndependentWork24
         /// <summary>Повертає ціну товару та виводить інформацію в консоль.</summary>
         public double GetValue()
         {
-            Console.WriteLine($"Product: {Name}, price = {Price}");
+            Console.WriteLine($"Товар: {Name}, ціна = {Price}");
             return Price;
         }
     }
@@ -79,13 +79,13 @@ namespace IndependentWork24
         /// </summary>
         public double GetValue()
         {
-            Console.WriteLine($"Bundle: {Name}");
+            Console.WriteLine($"Набір: {Name}");
             double sum = 0;
             foreach (var item in _items)
             {
                 sum += item.GetValue();
             }
-            Console.WriteLine($"Bundle total = {sum}");
+            Console.WriteLine($"Вартість набору = {sum}");
             return sum;
         }
     }
@@ -138,7 +138,7 @@ namespace IndependentWork24
         {
             double baseValue = Component.GetValue();
             double discounted = baseValue * (1 - _percent / 100.0);
-            Console.WriteLine($"DiscountDecorator: {baseValue} -> {discounted} after {_percent}% discount");
+            Console.WriteLine($"Декоратор знижки: {baseValue} -> {discounted} після {_percent}% знижки");
             return discounted;
         }
     }
@@ -166,7 +166,7 @@ namespace IndependentWork24
         {
             double baseValue = Component.GetValue();
             double taxed = baseValue * (1 + _percent / 100.0);
-            Console.WriteLine($"TaxDecorator: {baseValue} -> {taxed} after {_percent}% tax");
+            Console.WriteLine($"Декоратор податку: {baseValue} -> {taxed} після {_percent}% податку");
             return taxed;
         }
     }
@@ -223,9 +223,9 @@ namespace IndependentWork24
         /// </summary>
         public double Calculate(IComponent component)
         {
-            Console.WriteLine("LoggingPriceCalculatorProxy: початок розрахунку ціни...");
+            Console.WriteLine("Проксі логування: початок розрахунку ціни...");
             double result = _inner.Calculate(component);
-            Console.WriteLine($"LoggingPriceCalculatorProxy: результат = {result}");
+            Console.WriteLine($"Проксі логування: результат = {result}");
             return result;
         }
     }
@@ -246,31 +246,31 @@ namespace IndependentWork24
         private static void Main(string[] args)
         {
             // Створюємо окремі товари
-            var apple = new Product("Apple", 1.2);
-            var orange = new Product("Orange", 0.8);
-            var milk = new Product("Milk", 2.5);
+            var apple = new Product("Яблуко", 1.2);
+            var orange = new Product("Апельсин", 0.8);
+            var milk = new Product("Молоко", 2.5);
 
             // Демонстрація Composite: створюємо ієрархію
-            var fruitBundle = new ProductBundle("Fruit Bundle");
+            var fruitBundle = new ProductBundle("Набір фруктів");
             fruitBundle.Add(apple);
             fruitBundle.Add(orange);
 
-            var groceryBundle = new ProductBundle("Grocery Bundle");
+            var groceryBundle = new ProductBundle("Набір продуктів");
             groceryBundle.Add(fruitBundle);
             groceryBundle.Add(milk);
 
             // Тестування Composite паттерну
-            Console.WriteLine("=== Composite ===");
+            Console.WriteLine("=== Композит ===");
             groceryBundle.GetValue();
 
             // Демонстрація Decorator: послідовне застосування знижок та податків
-            Console.WriteLine("\n=== Decorator ===");
+            Console.WriteLine("\n=== Декоратор ===");
             var discountedBundle = new DiscountDecorator(groceryBundle, 10);
             var taxedDiscountedBundle = new TaxDecorator(discountedBundle, 5);
             taxedDiscountedBundle.GetValue();
 
             // Демонстрація Proxy та порівняння продуктивності
-            Console.WriteLine("\n=== Proxy + Performance comparison ===");
+            Console.WriteLine("\n=== Проксі + Порівняння продуктивності ===");
             var calculator = new SimplePriceCalculator();
             var proxyCalculator = new LoggingPriceCalculatorProxy(calculator);
 
