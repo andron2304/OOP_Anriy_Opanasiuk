@@ -1,35 +1,74 @@
-# MusicPlayer OOP
+# MusicPlayer OOP — Комплексна система управління аудіоплеєром
 
-A comprehensive music player application demonstrating advanced Object-Oriented Programming principles and design patterns.
+Цей проєкт є випускною практичною/лабораторною роботою, що демонструє побудову архітектури програмного забезпечення відповідно до принципів **SOLID**, чистий код (**Clean Code**) та застосування класичних патернів проєктування **Gang of Four (GoF)** на платформі .NET.
 
-## Project Description
 
-MusicPlayer_OOP is a multi-layered music management system built with C# and .NET 8.0. It showcases professional software architecture through clean code principles, design patterns, and comprehensive testing.
+##  Структура рішення (Solution Architecture)
 
-## How to Run
+Проєкт розділений на три незалежні шари (проєкти в одному Solution), що забезпечує низьку зв'язаність (Low Coupling) та високу зв'язність (High Cohesion) коду:
 
-### Prerequisites
-- .NET 8.0 SDK or later
-- Visual Studio 2022 or VS Code with C# extension
+1. **`MusicPlayer.Domain` (Класс-бібліотека):**
+   - Ядро системи. Містить усі бізнес-сутності, інтерфейси, кастомні винятки, логіку колекцій та LINQ-запитів, а також реалізацію ключових патернів проєктування.
+2. **`MusicPlayer.App` (Консольний застосунок):**
+   - Точка входу в програму (`Program.cs`). Демонструє роботу плеєра, взаємодіє з подіями в UI-режимі, ініціює збереження та завантаження даних через файлову систему.
+3. **`MusicPlayer.Tests` (Тестовий проєкт xUnit):**
+   - Набір автоматизованих модульних тестів для верифікації працездатності критичних вузлів бізнес-логіки.
 
-### Build and Run
+
+##  Технічний стек
+
+- **Мова програмування:** C# 11
+- **Платформа:** .NET 8.0
+- **Тестування:** xUnit Framework
+- **Формат даних:** JSON (через високопродуктивний `System.Text.Json`)
+- **Інструменти роботи з даними:** LINQ (Language Integrated Query)
+
+
+##  Функціональні можливості та етапи реалізації
+
+### 1. Базова логіка та ООП (Інкапсуляція, Успадкування, Поліморфізм)
+- Створено базові класи для треків та плейлистів із глибокою інкапсуляцією полів та валідацією даних через конструктори.
+- Налаштовано коректні модифікатори доступу, що виключає можливість несанкціонованої зміни стану об'єктів ззовні.
+
+### 2. Колекції, LINQ та Спеціалізована логіка
+- **Репозиторій:** Реалізовано узагальнений патерн `Repository<T>`, який абстрагує роботу зі збереженням об'єктів у пам'яті.
+- **Оптимізація пошуку:** У сервісах використовуються комбінації `List<T>` для загального збереження та `Dictionary<string, Track>` для миттєвого пошуку треків за ідентифікатором чи назвою (швидкість $O(1)$).
+- **LINQ-запити:** Впроваджено комплексні запити для фільтрації треків за автором (використовуючи `GroupBy` та `Join`) та сортування за тривалістю відтворення.
+- **Методи розширення (Extension Methods):** Створено статичний метод `GetTotalDuration()` для інтерфейсу `IEnumerable<Track>`, який дозволяє однією командою порахувати загальну тривалість будь-якої вибірки пісень.
+
+### 3. Обробка помилок та Retry Policy (Політика повторних спроб)
+- Створено власну ієрархію винятків: `TrackNotFoundException` та `InvalidPlaylistOperationException`.
+- Реалізовано стійкість до збоїв у класі `FileHelper`: при симуляції читання файлів використовується **Retry Policy з експоненційним запізненням** (3 спроби, де кожна наступна пауза довша за попередню).
+
+### 4. Збереження стану (Persistence)
+- Клас `DataManager` інкапсулює роботу з текстовими файлами. Стан плеєра (список треків) автоматично серіалізується в `data.json` та відновлюється при перезапуску програми.
+
+
+##  Реалізовані патерни проєктування (Design Patterns)
+
+Проєкт наочно демонструє роботу трьох основних груп патернів:
+
+| Назва патерну | Клас / Інтерфейс у проєкті | Призначення у плеєрі |
+| :--- | :--- | :--- |
+| **Factory Method** | `AudioEntityFactory` | Централізоване створення об'єктів `Track` та `Playlist` без прямого виклику `new`. |
+| **Singleton** | `PlayerSettings` | Потокобезпечний (`Thread-Safe`) єдиний екземпляр конфігурації плеєра (гучність, мова). |
+| **Strategy** | `IPlaybackStrategy`, `ShuffleStrategy`, `RepeatStrategy` | Динамічна зміна алгоритму вибору наступної пісні (випадковий порядок або повтор одного треку). |
+| **Composite** | `IPlaylistComponent`, `Track`, `Playlist` | Дозволяє створювати ієрархію: плейлист може містити як окремі треки, так і цілі підплейлисти (папки). |
+| **Iterator** | `PlaylistIterator` (`IEnumerator<Track>`) | Послідовний обхід елементів плейлиста без розкриття внутрішньої структури колекції клієнту. |
+| **Observer** | Подія `TrackChanged` у класі `Player` | Повідомляє UI про зміну поточної пісні. Реалізовано безпечну відписку для уникнення витоків пам'яті. |
+
+
+##  Модульне тестування (Unit Testing)
+
+Тестовий шар написаний з використанням фреймворку **xUnit**. Усі тести спроєктовані за класичною структурою **AAA (Arrange, Act, Assert)**:
+
+1. **Тест додавання елементів:** Перевіряє коректність роботи патерну *Composite* при додаванні компонентів до плейлиста.
+2. **Тест стратегії відтворення:** Верифікує, що `ShuffleStrategy` дійсно повертає трек, який входить до базового списку відтворення.
+3. **Тест методу розширення:** Перевіряє точність математичного підрахунку загального часу відтворення для колекції пісень у `GetTotalDuration()`.
+
+### Збірка та запуск
 ```bash
 cd MusicPlayer_OOP
 dotnet build
 dotnet run --project MusicPlayer.App
-```
-
-### Run Tests
-```bash
 dotnet test
-```
-
-## Design Patterns Implemented
-
-- **Factory Pattern** - `AudioEntityFactory` for creating audio entities
-- **Strategy Pattern** - `ShuffleStrategy` and `RepeatStrategy` for playback modes
-- **Composite Pattern** - `Playlist` and `IPlaylistComponent` for hierarchical structures
-- **Iterator Pattern** - `PlaylistIterator` for traversing collections
-- **Repository Pattern** - `Repository` for data access abstraction
-- **Extension Methods** - `TrackExtensions` for domain extensions
-- **Singleton/Static** - `DataManager` for centralized data persistence
